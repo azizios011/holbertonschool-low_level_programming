@@ -1,6 +1,8 @@
 #include <stdio.h>
-/*
- * main - sizeof evaluates the size of a variable
+/**
+ * main - Entry point
+ *
+ * Description: 'sizeof evaluates the size of a variable'
  *
  * Return: Always 0.
  *
