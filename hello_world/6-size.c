@@ -1,21 +1,22 @@
-#include<stdio.h>
+#include <stdio.h>
 /*
- * main - Entry point
+ * main - sizeof evaluates the size of a variable
  *
  * Return: Always 0.
+ *
  */
 int main(void)
 {
-	char a;
-	int b;
-	long int c;
-	long long int d;
-	float e;
+	char charType;
+	int intType;
+	long int longintType;
+	long long int longlongintType;
+	float floatType;
 
-	printf("Size of char: %c byte(s)\n", (unsigned char)sizeof(a));
-	printf("Size of a int: %i byte(s)\n", (unsigned int)sizeof(b));
-	printf("Size of a long int: %li byte(s)\n", (unsigned long int)sizeof(c));
-	printf("Size of long long int: %lli byte(s)\n", (unsigned long long int)sizeof(d));
-	printf("size of float: %f byte(s)\n", (unsigned float)sizeof(e));
+	printf("Size of a char: %ld byte(s)\n", sizeof(charType));
+	printf("Size of an int: %ld byte(s)\n", sizeof(intType));
+	printf("Size of a long int: %ld byte(s)\n", sizeof(longintType));
+	printf("Size of a long long int: %ld byte(s)\n", sizeof(longlongintType));
+	printf("Size of a float: %ld byte(s)\n", sizeof(floatType));
 	return (0);
 }
