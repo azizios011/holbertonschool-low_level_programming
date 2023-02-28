@@ -18,12 +18,12 @@ int main(void)
 	digit = n % 10;
 	/* your code goes there */
 
-	if (n > 5)
+	if (digit > 5)
 	{
 		printf("Last digit of %d is %i and is greater than 5\n", n, digit);
 	}
 
-	else if (n == 0)
+	else if (digit == 0)
 	{
 		printf("Last digit of %d is %i and is 0\n", n, digit);
 	}
