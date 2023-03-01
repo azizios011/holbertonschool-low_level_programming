@@ -8,19 +8,11 @@
  */
 int main(void)
 {
-	int i;
-	int y;
+	char ch;
 
-	i = 1;
-	y = 48;
+	for (ch = '0'; ch <= '9'; ch++)
+		putchar(NUM);
+	putchar('\n');
 
-	while (i < 11)
-	{
-		putchar (y);
-		i++;
-		y++;
-	}
-		putchar('\n');
-		return (0);
+	return (0);
 }
-
