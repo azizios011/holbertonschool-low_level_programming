@@ -8,10 +8,10 @@
  */
 int _isalpha(int c)
 {
-	if (c >= 'a' && c <= 'z')
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 	{
-		if (c >= 'A' && c <= 'Z')
-			return (1);
+		return (1);
 	}
-		return (0);
+
+	return (0);
 }
