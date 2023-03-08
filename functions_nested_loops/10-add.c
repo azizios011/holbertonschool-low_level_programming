@@ -3,17 +3,12 @@
 /**
  * add - check the code
  *
- * @n1 : number1.
- * @n2 :number2.
+ * @n : number1.
+ * @m : number2.
  *
  * Return: Always 0.
  */
-int add(int n1, int n2)
+int add(int n, int m)
 {
-	int r;
-
-	r = n1 + n2;
-	_putchar(r);
-	_putchar('\n');
-	return (r);
+	return (n + m);
 }
