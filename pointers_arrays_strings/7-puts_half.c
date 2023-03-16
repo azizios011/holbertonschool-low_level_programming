@@ -1,7 +1,9 @@
 #include "main.h"
 #include <string.h>
 /**
- * main - check the code
+ * puts_half - check the code
+ *
+ * @str : string.
  *
  * Return: Always 0.
  */
@@ -14,9 +16,5 @@ void puts_half(char *str)
 	{
 		_putchar(str[i]);
 	}
-	 if (i > len)
-	 {
-		 _putchar('n');
-	 }
 		_putchar('\n');
 }
