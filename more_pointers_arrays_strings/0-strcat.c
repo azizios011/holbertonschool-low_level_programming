@@ -1,8 +1,8 @@
-#include "main.h"
 #include <stdio.h>
 #include <string.h>
+#include "main.h"
 /**
- * *_strcat - check the code
+ * *_strcat - check the code.
  *
  * @src : src.
  * @dest: dest.
