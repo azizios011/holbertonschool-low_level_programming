@@ -15,6 +15,10 @@ void print_array(int *a, int n)
 	{
 		printf("%d, ", a[x]);
 	}
+	if (a[x] == '\0')
+	{
+		printf("\n");
+	}
 	printf("%d", a[x]);
 	printf("\n");
 }
