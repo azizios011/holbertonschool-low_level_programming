@@ -1,5 +1,5 @@
-#ifndef dog_H
-#define dog_H
+#ifndef dog_t
+#define dog_t
 /**
  * struct dog - Entry point.
  * @name : name of the dog
@@ -14,6 +14,4 @@ struct dog
 };
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
-dog_t *new_dog(char *name, float age, char *owner);
-void free_dog(dog_t *d);
 #endif
