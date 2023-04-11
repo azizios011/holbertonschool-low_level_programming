@@ -8,12 +8,12 @@
  */
 void print_all(const char * const format, ...)
 {
-	const char* p = format;
+	const char *p = format;
 	va_list args;
 	int i_arg;
 	char c_arg;
 	float f_arg;
-	char* s_arg;
+	char *s_arg;
 
 	va_start(args, format);
 	while (*p != '\0')
@@ -53,3 +53,4 @@ void print_all(const char * const format, ...)
 	va_end(args);
 	printf("\n");
 }
+
