@@ -7,42 +7,24 @@
  */
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-	{
-		return (-1);
-	}
-
-	return (sqrt_helper(n, 0, n));
+	return (sqrt_helper(n, 1));
 }
 
 /**
  * sqrt_helper - check the code
  * @n: the number whose square root is to be found
- * @start:  the lower bound of the range of possible square roots
- * @end: the upper bound of the range of possible square roots
+ * @i: iterate number
  * Return: value.
 */
-int sqrt_helper(int n, int start, int end)
+int sqrt_helper(int n, int i)
 {
-	int mid;
+	int sqrt = i * i;
 
-	if (start > end)
-	{
+	if (sqrt > n)
 		return (-1);
-	}
 
-	mid = (start + end) / 2;
+	if (sqrt == n)
+		return (i);
 
-	if (mid * mid == n)
-	{
-		return (mid);
-	}
-	else if (mid * mid < n)
-	{
-		return (sqrt_helper(n, mid + 1, end));
-	}
-	else
-	{
-		return (sqrt_helper(n, start, mid - 1));
-	}
+	return (sqrt_helper(n, i + 1));
 }
