@@ -2,12 +2,10 @@
 #include <stddef.h>
 
 /**
- * get_op_func - Selects the correct function to perform the operation
- *               specified by the operator argument.
- * @s: The operator argument
+ * get_op_func - selects the correct function to perform the operation asked
+ * @s: operator passed as argument to the program
  *
- * Return: Pointer to the corresponding function, or NULL if the operator
- *         is invalid.
+ * Return: Pointer to the correct function, or NULL if the operator is invalid
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -24,8 +22,8 @@ int (*get_op_func(char *s))(int, int)
 
 	while (ops[i].op != NULL)
 	{
-		if (*ops[i].op == *s)
-		return (ops[i].f);
+		if (*(ops[i].op) == *s)
+			return (ops[i].f);
 		i++;
 	}
 
