@@ -8,24 +8,27 @@ void print_opcodes(int num_bytes);
  * @argv: argumment vector
  * Return: Alwys 0.
 */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
+	int i;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	int n = atoi(argv[1]);
 
-	int num_bytes = atoi(argv[1]);
-
-	if (num_bytes <= 0)
+	if (n < 0)
 	{
 		printf("Error\n");
 		return (2);
 	}
-
-	print_opcodes(num_bytes);
-
+	for (i = 0; i < n; i++)
+	{
+		printf("%02x ", ((unsigned char *)print_opcodes)[i]);
+	}
+	printf("\n");
 	return (0);
 }
 /**
