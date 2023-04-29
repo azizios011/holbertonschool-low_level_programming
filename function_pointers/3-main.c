@@ -11,35 +11,28 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2, result;
-	int (*op_func)(int, int);
+	int a, b, result;
+	char *op;
 
-	if (argc != 4) /* Check number of arguments */
+	if (argc != 4)
 	{
 		printf("Error\n");
-		return (98);
+		return (1);
 	}
 
-	num1 = atoi(argv[1]); /* Convert first argument to int */
-	num2 = atoi(argv[3]); /* Convert third argument to int */
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+	op = argv[2];
 
-	op_func = get_op_func(argv[2]); /* Get function for the operator */
-
-	if (op_func == NULL) /* Check if operator is valid */
+	if (get_op_func(op) == NULL)
 	{
 		printf("Error\n");
-		return (99);
+		return (2);
 	}
 
-	if ((argv[2][0] == '/' || argv[2][0] == '%') && num2 == 0)
-	{ /* Check for division by 0 */
-		printf("Error\n");
-		return (100);
-	}
+	result = get_op_func(op)(a, b);
 
-	result = op_func(num1, num2); /* Perform operation */
-
-	printf("%d\n", result); /* Print result */
+	printf("%d\n", result);
 
 	return (0);
 }
