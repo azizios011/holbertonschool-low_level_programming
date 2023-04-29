@@ -2,13 +2,12 @@
 #include <stddef.h>
 
 /**
- * get_op_func - Returns a pointer to the function that corresponds
- *                to the operator given as a parameter.
- * @s: Operator passed as argument to the program
+ * get_op_func - Selects the correct function to perform the operation
+ *               specified by the operator argument.
+ * @s: The operator argument
  *
- * Return: A pointer to the function that corresponds to the operator
- *         given as a parameter, or NULL if s does not match any of
- *         the expected operators (+, -, *, /, %)
+ * Return: Pointer to the corresponding function, or NULL if the operator
+ *         is invalid.
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -20,14 +19,15 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
 
-	i = 0;
-	while (ops[i].op)
+	int i = 0;
+
+	while (ops[i].op != NULL)
 	{
-		if (*(ops[i].op) == *s)
+		if (*ops[i].op == *s)
 		return (ops[i].f);
 		i++;
 	}
+
 	return (NULL);
 }
